@@ -1,0 +1,197 @@
+
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+/* The animation code  for profile picture*/
+@keyframes example {
+    0% {background-image:url('./images/proper.jpg');}
+    25% {background-image:url('./images/IMG_20200426_142649_0_1622292061232-min.jpg');}
+    50% {background-image:url('./images/IMG_20200426_142649_0_1622292061232-min.jpg');}
+    100% {background-image:url('./images/IMG_20200725_104223_3_1622291429888-min.jpg');}
+  }
+
+/* The animation code  for background*/
+@keyframes example2 {
+    0% {background-image:url('./images/water.jpg');}
+    25% {background-image:url('./images/moon_overwater.jpg');}
+    50% {background-image:url('./images/cloud_overwater.jpg');}
+    100% {background-image:url('./images/star.jpg');}
+  }
+
+img{
+    filter: brightness(100%);
+    filter: contrast(100%);
+}
+.link-container{
+    display: flex;
+    width: 100%;
+    font-weight: bold;
+    background-image: url(./images/moon_overwater.jpg);
+    background-size: 100% 100%;
+    
+}
+.link-container a{
+    border:1px solid rgb(116, 117, 116);
+    padding: 5px 15px;
+    margin: auto ;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    background-color: whitesmoke;
+    border-radius: 20%;
+    text-align: center;
+}
+
+a:hover{
+    background-color: seagreen;
+}
+
+marquee{
+    color: whitesmoke;
+    font-family:cursive;
+   
+   
+}
+
+.item1 { 
+animation-name: example;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+background-size: 100% 100%;
+grid-area: 1/1/span 2/ span 1;
+border-radius: 10%;
+
+}
+.item2 { 
+    grid-area: 1/2/ span 1/ span 2;
+    text-align: right;
+    display: inline-block;
+}
+
+
+
+    .item3 { 
+    grid-area: 3/1/span 1/ span 2;
+    float: left;
+ }
+
+ .item4{
+    grid-area: 3/3/span 1/ span 1;
+    float: right;
+ }
+
+iframe{
+    height: fit-content;
+}
+
+
+
+.grid-container{
+    display: grid;
+    animation-name: example2;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+background-size: 100% 100%;
+    grid-template-rows: 25vh 25vh 25vh  25vh;
+    grid-template-columns: 33vw auto auto;
+    width: 100%;
+    height: 100%;
+grid-gap: 20px;
+padding: 10px; 
+}
+
+.grid-container > div {
+    
+    padding: 20px 0;
+  }
+
+  
+.container-social{
+    display: inline-block;
+    }
+
+    .container-social a{
+        border:1px solid rgb(116, 117, 116);
+        padding: 5px 15px;
+        margin: auto ;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        background-color: whitesmoke;
+        border-radius: 20%;
+        text-align: center;   
+    }
+  
+ h2{
+     font-family: cursive;
+     color:whitesmoke;
+     text-align: center;
+ } 
+
+ h3,h5{
+    font-family: cursive;
+    color:whitesmoke;
+    text-align: left;
+ }
+
+ ul a{
+     
+     border:1px solid rgb(116, 117, 116);
+     padding: 5px 15px;
+     margin: auto ;
+     margin-bottom: 20px;
+     margin-top: 30px;
+     background-color: mediumaquamarine;
+     border-radius: 20%;
+     align-content: center;
+ }
+
+
+ .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+
+  @media screen and (max-width: 565px) {
+   
+    iframe {
+      display: none;
+    }
+    
+   ul a{
+    border: none;
+    padding: 0px;
+   } 
+
+   marquee,h2,h3,h5{
+       font-size: xx-small;
+   }
